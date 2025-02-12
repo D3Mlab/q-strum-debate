@@ -1,0 +1,27 @@
+Query: {{query}}
+
+Explanation A:
+{{a}}
+
+Explanation B:
+{{b}}
+
+Your role is to evaluate Explanation A and Explanation B as being good contrastive explanations for {{domain}} recommendation. The provided criteria should be used and you should select either "A" or "B" as the winner for each criterion or "tie" if both explanations are the same. You should provide explanations for each of your choices.
+
+Criteria:
+contrast - The summarizations should differentiate between the two {{domain}}s well, such as by including pros and cons and details, and help a user choose one {{domain}} instead of the other. 
+relevancy - The summarizations provided should be relevant to each aspect and query provided.
+diversity - The summarizations should provide multiple different points in support and against the {{domain}} for each aspect. Repetitive points should be penalized and a variety of different points should be rewarded. Additional context that is not repetitive should be rewarded.
+usefulness - The summarizations should provide useful information and be informative for a user to make a decision between the two {{domain}}s.
+
+Output in JSON format:
+{
+    "contrast": "A" or "B" or "tie",
+    "contrast_explanation": <explanation>,
+    "relevancy": "A" or "B" or "tie",
+    "relevancy_explanation": <explanation>,
+    "diversity": "A" or "B" or "tie",
+    "diversity_explanation": <explanation>,
+    "usefulness": "A" or "B" or "tie",
+    "usefulness_explanation": <explanation>
+}

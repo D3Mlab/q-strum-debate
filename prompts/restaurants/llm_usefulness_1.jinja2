@@ -1,0 +1,25 @@
+{{comparison}}
+
+Query: {{query}}
+
+Given the provided comparison between 2 restaurants across aspects, filter out the aspects and values that do not meet the helpfulness desiderata as defined below:
+1. Attribution to Sources: This ensures that the information presented is traceable, as each extraction is accompanied by evidence from the source text. We achieve this by adopting an extractive approach, and including source URLs for each extraction.
+2. Identification of High-Contrast and Important Attributes: We identify attributes where there is a significant contrast between the two options to aid with decision making. Note that some attributes are inherently informative and do not necessarily require contrasting views to be informative. We surface these attributes based on how often they occur in the input sources (popularity signal). Examples include the price attribute for a car comparison or the ingredients for a peanut butter comparison.
+3. Consistent, Non-Redundant, and Accurate Opinion Representation: We provide a comprehensive, consistent, and non-redundant view of the attributes and values. For example, if for entity A, the opinion good view is held by a minority (1/10) and bad view is the majority opinion (9/10), whereas for entity B, bad view is unanimous (10/10), the comparison should not misleadingly present it as good view for A versus bad view for B (thereby optimizing contrast between the entities). We cluster the redundant values and remove the minority inconsistent values, so that the summary reflects the majority opinion.
+4. Ranking and Presentation of Attributes: This ensures that the most pertinent and high contrast attributes are highlighted in the comparison. We present the final comparison summary in a faceted format where we show a row per attribute to further aid with structured decision making between two options.
+
+Return a JSON in the same format as the input. The exact same attributes should be used for both restaurants. No restaurant should have a missing or extra attribute.
+
+Output format:
+{
+    "{{dest1}}": {
+        "<attribute1>": "<value phrase> [<citation>]",
+        "<attribute2>: "<value phrase> [<citation>]",
+        ...
+    },
+    "{{dest2}}": {
+        "<attribute1>": "<value phrase> [<citation>]",
+        "<attribute2>: "<value phrase> [<citation>]",
+        ...
+    }
+}

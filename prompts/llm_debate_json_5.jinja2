@@ -1,0 +1,26 @@
+Query: {{query}}
+Aspect: {{aspect}}
+
+Destination 1: {{dest1}}
+{{sents1}}
+
+Destination 2: {{dest2}}
+{{sents2}}
+
+Debate: {{debate}}
+
+Based on the provided sentences and debate, provide a contrastive comparison for each of 2 destinations for the aspect in JSON format.
+
+Requirements are as follows:
+- Do not mention Alice or Bob in the output.
+- The keys should be the destination names, exactly as provided.
+- The output should include summarization, backed by quotes with exact phrases from the provided sentences with sentence number citations.
+- The output should be contrastive, specifically mentioning pros and cons of the destination.
+- You must include at least 5 points per aspect for each destination.
+
+
+Output format:
+{
+    "{{dest1}}": "<extracted phrases> [sentence #]",
+    "{{dest2}}": "<extracted phrases> [sentence #]"
+}

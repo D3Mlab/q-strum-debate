@@ -1,0 +1,30 @@
+Destination 1: {{dest1}}
+{{attributes1}}
+
+Destination 2: {{dest2}}
+{{attributes2}} 
+
+Query: {{query}}
+
+Return a JSON with attributes and their values.
+
+Requirements are as follows:
+- You must return exactly 3 attributes for each destination.
+- Each attribute must have exactly 3 bullet points, summarizing the destination for that attribute.
+- Each bullet point must be relevant to the attribute and must be supported by a citation.
+- The attributes should be identical for both destinations.
+- Do not include meaningless attributes like null or N/A.
+
+Output format:
+{
+    "{{dest1}}": {
+        "<attribute1_placeholder>": ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", "<value phrase 3> [<citation>]"],
+        "<attribute2_placeholder>: ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", "<value phrase 3> [<citation>]"],
+        "<attribute3_placeholder>: ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", "<value phrase 3> [<citation>]"]
+    },
+    "{{dest2}}": {
+        "<attribute1_placeholder>": ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", "<value phrase 3> [<citation>]"],
+        "<attribute2_placeholder>: ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", "<value phrase 3> [<citation>]"],
+        "<attribute3_placeholder>: ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", "<value phrase 3> [<citation>]"]
+    }
+}

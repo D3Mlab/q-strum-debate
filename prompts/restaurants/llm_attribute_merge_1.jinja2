@@ -1,0 +1,24 @@
+Restaurant 1: {{dest1}}
+Attributes 1: {{attributes1}}
+
+Restaurant 2: {{dest2}}
+Attributes 2: {{attributes2}}
+
+Query: {{query}}
+
+Merge any similar attributes from the attribute lists for each restaurant. Return a JSON mapping the old attribute names exactly to the new attribute names. Include the old attribute names from both restaurants in the output. Ensure the new attributes are common to both restaurants.
+
+Output format:
+
+{
+  "{{dest1}}": {
+    "oldAttr1": "newAttr1",
+    "oldAttr2": "newAttr2",
+    ...
+  },
+  "{{dest2}}": {
+    "oldAttr3": "newAttr3",
+    "oldAttr4": "newAttr4",
+    ...
+  }
+}

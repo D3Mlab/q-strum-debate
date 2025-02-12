@@ -1,0 +1,20 @@
+llm: gpt4o
+dataset:  hotels
+domain: hotel
+prompt_dir: prompts
+llm_comparer: GeneralComparer
+log_level: DEBUG
+debate: True
+debate_iter: 1
+debate_mode: single
+mode: filter
+prompts:
+  extract: llm_extract_4.jinja2
+  attribute_merge: llm_attribute_merge_1.jinja2
+  filter: llm_filter_1.jinja2
+  value_merge: llm_value_merge_1.jinja2
+  contrast: llm_contrast_3.jinja2
+  debate: llm_debate_3.jinja2
+  debate_json: llm_debate_json_5.jinja2
+  usefulness: llm_usefulness_1.jinja2
+  pairwise_asp_eval: pairwise_eval_3.jinja2

@@ -1,0 +1,13 @@
+Destination: {{dest}}
+{{attributes}}
+
+Query: {{query}}
+
+Cluster the similar values for each attribute separately, removing inconsistent minority opinions, and keeping the values that reflect the majority opinions. Keep the value phrases exactly as they are and keep the existing sentence number citations for each value. Return a JSON with all of the attributes and selected values.
+
+Output format:
+{
+  "attribute1": "value1 [citation]",
+  "attribute2": "value2 [citation]",
+  ...
+}

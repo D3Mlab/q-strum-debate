@@ -1,0 +1,23 @@
+Destination 1: {{dest1}}
+{{attributes1}}
+
+Destination 2: {{dest2}}
+{{attributes2}} 
+
+Query: {{query}}
+
+Identify the top 3 most informative attributes. For each attribute, identify exactly 10 of the most informative value pharases. You must have exactly 3 attributes per destination and exactly 10 value phrases per attribute, no exceptions. Both destinations must have the exact same 3 attributes. Follow the JSON output format provided exactly.
+
+Output format:
+{
+    "{{dest1}}": {
+        "<attribute1_placeholder>": ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", ...],
+        "<attribute2_placeholder>: ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", ...],
+        ...
+    },
+    "{{dest2}}": {
+        "<attribute1_placeholder>": ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]", ...],
+        "<attribute2_placeholder>: ["<value phrase 1> [<citation>]", "<value phrase 2> [<citation>]",
+        ...
+    }
+}

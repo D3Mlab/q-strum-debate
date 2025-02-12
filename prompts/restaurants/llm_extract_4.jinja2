@@ -1,0 +1,24 @@
+{{destination}}
+{{sentences}}
+
+Query: {{query}}
+
+Given the following restaurant and numbered texts, generate diverse and elaborative aspect phrases that describe what the user might be looking for according to the intent of the query provided and the information provided for the restaurant. Use the JSON format provided. 
+
+Requirements:
+- The aspect phrase must be elaborate, specific, descriptive and detailed.
+- You must include the aspect and list of relevant extracted phrases for the restaurant for that aspect. 
+- You must include a citation in a [#] format for the sentence that supports the aspect phrase from the provided sentences. Follow the same numbering as the provided sentences.
+- The values must be entire, long phrases extracted exaclty from the provided sentences. 
+- You must include exactly 5 aspects.
+- For each aspect, you must include at least 10 extracted phrases and each extracted phrase must be highly relevant to the aspect.
+- Prioritize relevancy in the extracted phrases over the number of phrases.
+
+
+
+Output format:
+{
+  "<aspect>": ["extracted phrase [sentence #]", extracted phrase [sentence #]", ...],
+  "<aspect>": ["extracted phrase [sentence #]", extracted phrase [sentence #]", ...],
+  ...
+}
